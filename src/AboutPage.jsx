@@ -1,4 +1,4 @@
-import resume from "./assets/resume.pdf";
+import resume from "/assets/resume.pdf";
 export default function AboutPage() {
   return (
     <div
@@ -36,7 +36,11 @@ export default function AboutPage() {
           and artificial intelligence, areas that spark my curiosity and that I
           am excited to learn more about.
         </p>
-        <a href={resume} download="Resume" className="text-[28px] mt-6 underline italic font-bold">
+        <a
+          href={resume}
+          download="Resume"
+          className="text-[28px] mt-6 underline italic font-bold"
+        >
           DOWNLOAD CV
         </a>
       </div>
