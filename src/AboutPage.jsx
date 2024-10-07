@@ -2,7 +2,7 @@ import resume from "/assets/resume.pdf";
 export default function AboutPage() {
   return (
     <div
-      className="h-screen  w-screen rounded-[100px] bg-secondary flex flex-col-2 justify-start items-start"
+      className="min-h-screen  w-screen rounded-[100px] bg-secondary flex flex-col-2 justify-start items-start"
       id="about"
     >
       <div className="ml-[6vw] flex flex-col mt-28">

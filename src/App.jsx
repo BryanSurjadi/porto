@@ -4,6 +4,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import AboutPage from "./AboutPage";
 import HomePage from "./HomePage";
 import SkillPage from "./SkillPage";
+import ProjectPage from "./ProjectsPage";
 // import Navbar from "./Navbar";
 
 export default function App() {
@@ -37,6 +38,7 @@ export default function App() {
       <HomePage />
       <AboutPage />
       <SkillPage />
+      <ProjectPage />
     </BrowserRouter>
   );
 }

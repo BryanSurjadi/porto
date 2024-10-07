@@ -18,7 +18,7 @@ const skills = [
 export default function SkillPage() {
   return (
     <div
-      className="h-screen  w-screen rounded-[100px] bg-primary flex flex-col-2 justify-start items-start"
+      className="min-h-screen  w-screen rounded-[100px] bg-primary flex flex-col-2 justify-start items-start"
       id="skills"
     >
       <div className="ml-[6vw] flex flex-col mt-28">

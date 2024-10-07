@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 export default function HomePage() {
   return (
     <div
-      className="h-screen  w-screen rounded-[100px] bg-primary flex flex-row flex-row-2 justify-start items-center"
+      className="min-h-screen  w-screen rounded-[100px] bg-primary flex flex-row flex-row-2 justify-start items-center"
       id="home"
     >
       <div className="ml-[6vw] flex flex-col">
