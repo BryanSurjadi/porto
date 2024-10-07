@@ -6,16 +6,16 @@ import resume from "./assets/resume.pdf";
 // import react from "./src/assets/react.png";
 
 const skills = [
-  "./src/assets/html.png",
-  "./src/assets/css.png",
-  "./src/assets/js.png",
-  "./src/assets/react.png",
-  "./src/assets/express.png",
-  "./src/assets/figma.png",
-  "./src/assets/mongodb.png",
-  "./src/assets/firebase.png",
-  "./src/assets/java.png",
-  "./src/assets/git.png",
+  "/src/assets/html.png",
+  "/src/assets/css.png",
+  "/src/assets/js.png",
+  "/src/assets/react.png",
+  "/src/assets/express.png",
+  "/src/assets/figma.png",
+  "/src/assets/mongodb.png",
+  "/src/assets/firebase.png",
+  "/src/assets/java.png",
+  "/src/assets/git.png",
 ];
 export default function SkillPage() {
   return (
