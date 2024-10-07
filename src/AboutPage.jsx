@@ -11,7 +11,7 @@ export default function AboutPage() {
           "Driven by curiosity, strengthened by perseverance."
         </h3>
 
-        <p className="text-[28px] mt-16 w-4/5 text-left">
+        <p className="text-[24px] mt-12 w-4/5 text-left">
           An undergraduate student at Binus University with a focus on becoming
           a skilled{" "}
           <span className="font-bold">web and software developer</span>. My
@@ -20,14 +20,14 @@ export default function AboutPage() {
           emphasize creating seamless user experiences in all my projects.
         </p>
 
-        <p className="text-[28px] mt-8 w-9/12 text-left">
+        <p className="text-[24px] mt-8 w-9/12 text-left">
           Beyond development, I manage{" "}
           <span className="font-bold">social media and design</span> strategies,
           driving brand visibility for multiple businesses. I'm passionate about
           learning and applying technology to solve real-world problems.
         </p>
 
-        <p className="text-[28px] mt-8 w-9/12 text-left">
+        <p className="text-[24px] mt-8 w-9/12 text-left">
           Looking to the future, my goal is to join a company where I can{" "}
           <span className="font-bold">
             collaborate with a team to make a meaningful impact

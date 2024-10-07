@@ -28,7 +28,7 @@ export default function App() {
             </Link>
           </li>
           <li className="hover:underline hover:text-orange-800">
-            <Link to="#about" smooth>
+            <Link to="#project" smooth>
               Portfolio
             </Link>
           </li>

@@ -28,7 +28,7 @@ export default function SkillPage() {
             <div key={index}>
               <img
                 src={skill}
-                className="rounded-[50px] w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 lg:w-80 lg:h-72 object-contain"
+                className="rounded-[50px] w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 lg:w-80 lg:h-72 object-contain hover:scale-105 transition-transform duration-300 ease-in-out"
               />
             </div>
           ))}
