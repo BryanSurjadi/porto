@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Use 'none' instead of '0' */
+  }
+
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+@layer base {
+  html,
+  body {
+    @apply no-scrollbar;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
