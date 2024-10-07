@@ -58,7 +58,7 @@ export default function HomePage() {
       <div>
         <img
           className="w-[800px] h-auto absolute right-0 bottom-0  overflow-hidden "
-          src="src/assets/pp.png"
+          src="./assets/pp.png"
           alt=""
         />
       </div>
