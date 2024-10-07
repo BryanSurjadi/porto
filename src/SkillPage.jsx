@@ -6,7 +6,7 @@ import resume from "./assets/resume.pdf";
 // import react from "./src/assets/react.png";
 
 const skills = [
-  "src/assets/html.png",
+  "../src/assets/html.png",
   "src/assets/css.png",
   "src/assets/js.png",
   "src/assets/react.png",
