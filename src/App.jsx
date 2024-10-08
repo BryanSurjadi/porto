@@ -5,6 +5,7 @@ import AboutPage from "./AboutPage";
 import HomePage from "./HomePage";
 import SkillPage from "./SkillPage";
 import ProjectPage from "./ProjectsPage";
+import Contacts from "./Contacts";
 // import Navbar from "./Navbar";
 
 export default function App() {
@@ -39,6 +40,7 @@ export default function App() {
       <AboutPage />
       <SkillPage />
       <ProjectPage />
+      <Contacts />
     </BrowserRouter>
   );
 }
