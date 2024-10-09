@@ -1,7 +1,7 @@
 export default function Contacts() {
   return (
     <div
-      className="min-h-[40vh] w-screen rounded-[100px] text-primary bg-tertiary flex flex-col justify-start  items-center"
+      className="min-h-[40vh] w-screen rounded-[50px] rounded-tr-none rounded-tl-none text-primary bg-tertiary flex flex-col justify-start  items-center"
       id="contact"
     >
       <div className=" flex flex-col pt-10 ">
