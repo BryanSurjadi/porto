@@ -25,12 +25,12 @@ const projects = [
     name: "MERN Booking App",
     description:
       "This project involved creating a comprehensive React-based application that replicates key functionalities of the Airbnb platform, including property listings, booking management, and user interactions. I independently developed the app to closely mimic the real Airbnb experience.",
-    technologies: "MongoDB, Express, React.js, Node.js,Tailwind CSS",
+    technologies: "MongoDB, Express.js, React.js, Node.js,Tailwind CSS",
     features: [
-      "Register Account",
-      "JWT Token Authentication",
-      "Login",
+      "Login & Register",
       "Middleware",
+      "JWT Token Authentication",
+      "BCrypt Password Hashing",
       "Create & View Listings",
       "Edit & Delete Listings",
       "View & Order Listings",
@@ -57,6 +57,8 @@ const projects = [
       "A complete e-commerce website built with ASP.NET Initially started as a school project , I built an e-commerce web application for managing makeup product transactions, with roles for both admins and users. The project included implementing cookies and session verification to enhance security and user experience. ",
     technologies: "ASP.NET Core, SQL Server Database, Entity Framework, C#",
     features: [
+      "MVC Architecture",
+      "Domain Driven Design",
       "Login & Register",
       "Middleware",
       "Admin Dashboard",
