@@ -11,7 +11,7 @@ import Contacts from "./Contacts";
 export default function App() {
   return (
     <BrowserRouter>
-      <nav className="w-1/3 h-10 fixed top-10 left-0 ml-[6vw]">
+      <nav className="w-1/3 h-10 fixed top-10 left-0 ml-[6vw] z-10">
         <ul className="flex w-full h-full flex-row justify-between font-medium text-[25px]">
           <li className="hover:underline hover:text-orange-800 ">
             <Link to="#home" smooth>

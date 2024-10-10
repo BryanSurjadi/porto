@@ -22,7 +22,7 @@ export default function HomePage() {
             sequence={[
               "Junior Software Developer",
               1000,
-              "& Also a Designer ",
+              "& a Designer ",
               1000, // wait 1s before replacing "Mice" with "Hamsters"
             ]}
             wrapper="span"
