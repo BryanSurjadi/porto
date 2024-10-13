@@ -22,13 +22,13 @@ export default function SkillPage() {
       id="skills"
     >
       <div className="ml-[6vw] flex flex-col mt-28">
-        <h1 className="text-[140px] font-semibold ">Skills</h1>
-        <div className="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <h1 className="xl:text-[140px] lg:text-8xl md:text-8xl sm:text-8xl text-8xl font-semibold ">Skills</h1>
+        <div className="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 grid-cols-3 gap-4">
           {skills.map((skill, index) => (
             <div key={index}>
               <img
                 src={skill}
-                className="rounded-[50px] w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 lg:w-80 lg:h-72 object-contain hover:scale-105 transition-transform duration-300 ease-in-out"
+                className="rounded-[50px] sm:w-48 sm:h-48 md:w-52 md:h-52 lg:w-80 lg:h-72 w-48 h-48 object-contain hover:scale-105 transition-transform duration-300 ease-in-out"
               />
             </div>
           ))}

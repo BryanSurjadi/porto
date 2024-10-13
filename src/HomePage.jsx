@@ -13,11 +13,11 @@ export default function HomePage() {
             sequence={["Bryan Surjadi", 1000]}
             wrapper="span"
             speed={10}
-            className="text-9xl font-semibold mb-[5vh]"
+            className="xl:text-9xl lg:text-8xl md:text-8xl sm:text-8xl text-8xl font-semibold mb-[5vh]"
             repeat={Infinity}
           />
         </div>
-        <div className="pt-2 pl-1">
+        <div className="xl:pt-2 lg:pt-1 md:pt-0 ">
           <TypeAnimation
             sequence={[
               "Junior Software Developer",
@@ -27,7 +27,7 @@ export default function HomePage() {
             ]}
             wrapper="span"
             speed={30}
-            className="text-4xl "
+            className="xl:text-4xl lg:text-3xl md:text-2xl sm:text-2xl text-3xl"
             repeat={Infinity}
           />
         </div>
@@ -57,7 +57,7 @@ export default function HomePage() {
       </div>
       <div>
         <img
-          className="w-[800px] h-auto absolute right-0 bottom-0  overflow-hidden "
+          className="xl:w-[800px] lg:w-[600px] md:w-[500px] w-[500px] h-auto absolute right-0 bottom-0  overflow-hidden rounded-[100px]"
           src="/assets/pp.png"
           alt=""
         />

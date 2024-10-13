@@ -93,7 +93,9 @@ export default function ProjectPage() {
       id="project"
     >
       <div className="ml-[6vw] flex flex-col mt-28 w-5/6 ">
-        <h1 className="text-[140px] font-semibold ">Projects</h1>
+        <h1 className="xl:text-[140px] lg:text-8xl md:text-8xl sm:text-8xl text-8xl font-semibold ">
+          Projects
+        </h1>
         <a
           href="https://drive.google.com/drive/folders/1VUHZ7ngz7fennvyKPFKT3AyXKKvz84cm"
           target="_blank"
