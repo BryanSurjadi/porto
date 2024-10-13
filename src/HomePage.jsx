@@ -31,7 +31,7 @@ export default function HomePage() {
             repeat={Infinity}
           />
         </div>
-        <div className="flex flex-row mt-10 gap-6">
+        <div className="flex flex-row mt-10 gap-6 z-10">
           <a
             href="https://github.com/BryanSurjadi"
             target="_blank"
@@ -57,7 +57,7 @@ export default function HomePage() {
       </div>
       <div>
         <img
-          className="xl:w-[800px] lg:w-[600px] md:w-[500px] w-[270px] h-auto absolute right-0 bottom-0  overflow-hidden rounded-[100px]"
+          className="xl:w-[800px] lg:w-[600px] md:w-[500px] w-[300px] h-auto absolute right-0 bottom-0  overflow-hidden rounded-[100px]"
           src="/assets/pp.png"
           alt=""
         />
