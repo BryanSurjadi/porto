@@ -13,7 +13,7 @@ export default function HomePage() {
             sequence={["Bryan Surjadi", 1000]}
             wrapper="span"
             speed={10}
-            className="xl:text-9xl lg:text-8xl md:text-8xl sm:text-8xl text-8xl font-semibold mb-[5vh]"
+            className="xl:text-9xl lg:text-8xl md:text-8xl sm:text-8xl text-6xl font-semibold mb-[5vh]"
             repeat={Infinity}
           />
         </div>
@@ -57,7 +57,7 @@ export default function HomePage() {
       </div>
       <div>
         <img
-          className="xl:w-[800px] lg:w-[600px] md:w-[500px] w-[500px] h-auto absolute right-0 bottom-0  overflow-hidden rounded-[100px]"
+          className="xl:w-[800px] lg:w-[600px] md:w-[500px] w-[270px] h-auto absolute right-0 bottom-0  overflow-hidden rounded-[100px]"
           src="/assets/pp.png"
           alt=""
         />

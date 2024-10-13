@@ -93,7 +93,7 @@ export default function ProjectPage() {
       id="project"
     >
       <div className="ml-[6vw] flex flex-col mt-28 w-5/6 ">
-        <h1 className="xl:text-[140px] lg:text-8xl md:text-8xl sm:text-8xl text-8xl font-semibold ">
+        <h1 className="xl:text-[140px] lg:text-8xl md:text-8xl sm:text-8xl text-6xl font-semibold ">
           Projects
         </h1>
         <a
@@ -111,7 +111,7 @@ export default function ProjectPage() {
           <div className="flex items-start justify-center mr-24">
             <Icon icon="material-symbols:arrow-back" className="size-10 " />
           </div>
-          <div className="items-center flex bg-secondary w-3/4 pl-4 font-medium ">
+          <div className="items-center flex bg-secondary xl:w-3/4 w-full pl-4 font-medium ">
             {" "}
             D: / Projects
           </div>

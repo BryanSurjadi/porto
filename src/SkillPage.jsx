@@ -22,7 +22,9 @@ export default function SkillPage() {
       id="skills"
     >
       <div className="ml-[6vw] flex flex-col mt-28">
-        <h1 className="xl:text-[140px] lg:text-8xl md:text-8xl sm:text-8xl text-8xl font-semibold ">Skills</h1>
+        <h1 className="xl:text-[140px] lg:text-8xl md:text-8xl sm:text-8xl text-6xl font-semibold ">
+          Skills
+        </h1>
         <div className="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 grid-cols-3 gap-4">
           {skills.map((skill, index) => (
             <div key={index}>
