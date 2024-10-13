@@ -57,7 +57,7 @@ export default function HomePage() {
       </div>
       <div>
         <img
-          className="xl:w-[800px] lg:w-[600px] md:w-[500px] w-[300px] h-auto absolute right-0 bottom-0  overflow-hidden rounded-[100px]"
+          className="xl:w-[800px] lg:w-[600px] md:w-[500px] w-[300px] h-auto absolute lg:right-0 md:right-0 sm:right-0 lg:bottom-0 md:bottom-0 sm:bottom-0 -bottom-6  overflow-hidden rounded-[100px]"
           src="/assets/pp.png"
           alt=""
         />
