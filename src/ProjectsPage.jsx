@@ -102,7 +102,7 @@ export default function ProjectPage() {
           rel="noopener noreferrer"
           className="underline text-3xl font-semibold hover:text-orange-800"
         >
-          Complete Portfolio For Now
+          Portfolio in PDF Format
         </a>
       </div>
 
