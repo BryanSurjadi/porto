@@ -24,18 +24,24 @@ export default function Carousel({ children: slides }) {
           </div>
         ))}
       </div>
-      <div className=" absolute inset-0 flex items-center justify-between  ">
+      <div className=" absolute inset-0 flex items-center justify-between   ">
         <button
           onClick={prev}
           className="p-1 bg-gray-400 rounded-full opacity-70  hover:bg-gray-700"
         >
-          <Icon icon="mdi:chevron-left" className="size-16 cursor-pointer " />
+          <Icon
+            icon="mdi:chevron-left"
+            className="size-10 lg:size-16 md:size-12 sm:size-10 cursor-pointer "
+          />
         </button>
         <button
           onClick={next}
           className="p-1 bg-gray-400 rounded-full opacity-70  hover:bg-gray-700"
         >
-          <Icon icon="mdi:chevron-right" className="size-16 cursor-pointer" />
+          <Icon
+            icon="mdi:chevron-right"
+            className="size-10 lg:size-16 md:size-12 sm:size-10 cursor-pointer"
+          />
         </button>
       </div>
     </div>
