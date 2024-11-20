@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 export default function HomePage() {
   return (
     <div
-      className="min-h-screen  w-screen rounded-[100px] bg-primary flex flex-row flex-row-2 justify-start items-center"
+      className="min-h-screen  w-screen rounded-[75px] bg-primary flex flex-row flex-row-2 justify-start items-center"
       id="home"
     >
       <div className="ml-[6vw] flex flex-col">
@@ -13,7 +13,7 @@ export default function HomePage() {
             sequence={["Bryan Surjadi", 1000]}
             wrapper="span"
             speed={10}
-            className="xl:text-9xl lg:text-8xl md:text-8xl sm:text-8xl text-6xl font-semibold mb-[5vh]"
+            className="xl:text-7xl lg:text-6xl md:text-6xl sm:text-6xl text-4xl font-semibold mb-[5vh]"
             repeat={Infinity}
           />
         </div>
@@ -27,7 +27,7 @@ export default function HomePage() {
             ]}
             wrapper="span"
             speed={30}
-            className="xl:text-4xl lg:text-3xl md:text-2xl sm:text-2xl text-3xl"
+            className="xl:text-2xl lg:text-2xl md:text-xl sm:text-xl text-3xl"
             repeat={Infinity}
           />
         </div>
@@ -57,7 +57,7 @@ export default function HomePage() {
       </div>
       <div>
         <img
-          className="xl:w-[800px] lg:w-[600px] md:w-[500px] w-[300px] h-auto absolute lg:right-0 md:right-0 sm:right-0 lg:bottom-0 md:bottom-0 sm:bottom-0 -bottom-3 right-0 overflow-hidden rounded-[100px]"
+          className="xl:w-[800px] lg:w-[600px] md:w-[500px] w-[300px] h-auto absolute lg:right-0 md:right-0 sm:right-0 lg:bottom-0 md:bottom-0 sm:bottom-0 -bottom-3 right-0 overflow-hidden rounded-[75px]"
           src="/assets/pp.png"
           alt=""
         />
