@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: "#f6e8b1",
-        primary: "#faf6e0",
-        secondary: "#fffdd1",
-        tertiary: "#1e1e1e",
-        box: "#cecdb7",
-        hover: "#d4caa3",
+        bg: "#FFFFFF",
+        primary: "#FFFFFF",
+        secondary: "#FFFFFF",
+        tertiary: "#0D1B1E",
+        box: "#F3F3F2",
+        hover: "#CBBFBB",
       },
       fontFamily: {
         sans: ["Playfair Display", "serif"],

@@ -1,33 +1,54 @@
 import { TypeAnimation } from "react-type-animation";
 import { Icon } from "@iconify/react";
+import { useEffect } from "react";
 
 export default function HomePage() {
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const hero = document.getElementById("home");
+    const update = () => hero.style.setProperty("--portrait-scroll", `${Math.min(window.scrollY, hero.offsetHeight) * .16}px`);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
+  }, []);
+
   return (
     <div
-      className="min-h-screen  w-screen rounded-[75px] bg-primary flex flex-row flex-row-2 justify-start items-center"
+      className="hero-section"
       id="home"
+      onPointerMove={(event) => {
+        if (event.pointerType !== "mouse") return;
+        const bounds = event.currentTarget.getBoundingClientRect();
+        event.currentTarget.style.setProperty("--portrait-x", `${Math.max(-24, Math.min(24, (event.clientX - bounds.left - bounds.width / 2) * .06))}px`);
+        event.currentTarget.style.setProperty("--portrait-y", `${Math.max(-16, Math.min(16, (event.clientY - bounds.top - bounds.height / 2) * .04))}px`);
+      }}
+      onPointerLeave={(event) => {
+        event.currentTarget.style.setProperty("--portrait-x", "0px");
+        event.currentTarget.style.setProperty("--portrait-y", "0px");
+      }}
     >
-      <div className="ml-[6vw] flex flex-col">
-        <div>
+      <span className="hero-float-mark" aria-hidden="true">✦</span>
+      <div className="hero-copy flex flex-col hero-copy-motion">
+        <h1>
           <TypeAnimation
             sequence={["Bryan Surjadi", 1000]}
             wrapper="span"
             speed={10}
-            className="xl:text-7xl lg:text-6xl md:text-6xl sm:text-6xl text-4xl font-semibold mb-[5vh]"
+            className="hero-name font-semibold"
             repeat={Infinity}
           />
-        </div>
+        </h1>
         <div className="xl:pt-2 lg:pt-1 md:pt-0 ">
           <TypeAnimation
             sequence={[
-              "Junior Software Developer",
+              "Software Developer",
               1000,
-              "& a Designer ",
-              1000, // wait 1s before replacing "Mice" with "Hamsters"
+              "Social Media & Ads Manager",
+              1000,
             ]}
             wrapper="span"
             speed={30}
-            className="xl:text-2xl lg:text-2xl md:text-xl sm:text-xl text-3xl"
+            className="hero-role"
             repeat={Infinity}
           />
         </div>
@@ -57,9 +78,9 @@ export default function HomePage() {
       </div>
       <div>
         <img
-          className="xl:w-[800px] lg:w-[600px] md:w-[500px] w-[300px] h-auto absolute lg:right-0 md:right-0 sm:right-0 lg:bottom-0 md:bottom-0 sm:bottom-0 -bottom-3 right-0 overflow-hidden rounded-[75px]"
-          src="/assets/pp.png"
-          alt=""
+          className="hero-portrait hero-image-motion"
+          src="/assets/pp-full.jpg"
+          alt="Bryan Surjadi smiling at the camera"
         />
       </div>
     </div>

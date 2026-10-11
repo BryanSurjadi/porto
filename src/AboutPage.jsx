@@ -1,49 +1,40 @@
 import resume from "/assets/resume.pdf";
+import { Icon } from "@iconify/react";
 export default function AboutPage() {
   return (
     <div
-      className="min-h-screen  w-screen rounded-[75px] bg-secondary flex flex-col-2 justify-start items-start"
+      className="page-section bg-white"
       id="about"
     >
-      <div className="ml-[6vw] flex flex-col mt-28">
-        <h1 className="xl:text-7xl lg:text-6xl md:text-6xl sm:text-6xl text-4xl font-semibold ">
+      <div className="about-content flex flex-col" data-reveal>
+        <h2 className="xl:text-7xl lg:text-6xl md:text-6xl sm:text-6xl text-4xl font-semibold ">
           About Me
-        </h1>
-        <h3 className="xl:text-[28px] lg:text-4xl md:text-3xl sm:text-2xl text-2xl italic mt-6">
-          "Driven by curiosity, strengthened by perseverance."
-        </h3>
-
-        <p className="xl:text-[22px] lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px] xl:mt-12 mt-8 lg:w-4/5 w-full  text-left">
-          An undergraduate student at Binus University with a focus on becoming
-          a skilled{" "}
-          <span className="font-bold">web and software developer</span>. My
-          expertise includes building innovative digital solutions using
-          technologies like React.js, Flutter, Firebase, MongoDB, and more. I
-          emphasize creating seamless user experiences in all my projects.
+        </h2>
+        <p className="section-paragraph">
+          I&apos;m a software developer most at home with backend and full-stack
+          work. At <strong>Polytron Indonesia</strong>, I&apos;ve worked with the APIs,
+          databases, and workflows that keep web products running. Outside of
+          work, I build tools that use AI and automation to take repetitive
+          steps out of creative and administrative tasks.
         </p>
 
-        <p className="xl:text-[22px] lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px] xl:mt-12 mt-8 lg:w-4/5 w-full  text-left">
-          Beyond development, I manage{" "}
-          <span className="font-bold">social media and design</span> strategies,
-          driving brand visibility for multiple businesses. I'm passionate about
-          learning and applying technology to solve real-world problems.
+        <p className="section-paragraph">
+          I also handle social media for a brand: planning content, producing
+          visuals and copy, and running Meta Ads campaigns. It gives me another
+          view of how people find a product, respond to it, and use it.
         </p>
 
-        <p className="xl:text-[22px] lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px] xl:mt-12 mt-8 lg:w-4/5 w-full  text-left">
-          Looking to the future, my goal is to join a company where I can{" "}
-          <span className="font-bold">
-            collaborate with a team to make a meaningful impact
-          </span>{" "}
-          to others. I am eager to further explore sectors like cloud computing
-          and artificial intelligence, areas that spark my curiosity and that I
-          am excited to learn more about.
+        <p className="section-paragraph">
+          I co-authored a paper accepted at ICIMTECH that compares GraphQL and
+          REST APIs across performance, resource use, and ease of implementation.
         </p>
         <a
           href={resume}
-          download="Resume"
-          className="xl:text-[28px] lg:text-[23px] md:text-[21px] sm:text-[19px] text-[17px] mt-10  underline italic font-bold"
+          download="Bryan-Surjadi-CV.pdf"
+          className="cv-download"
         >
-          DOWNLOAD CV
+          <Icon icon="mdi:download" aria-hidden="true" />
+          Download CV
         </a>
       </div>
     </div>

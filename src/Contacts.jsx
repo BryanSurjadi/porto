@@ -1,19 +1,19 @@
 export default function Contacts() {
   return (
-    <div
-      className="min-h-[40vh] w-screen rounded-[50px] rounded-tr-none rounded-tl-none text-primary bg-tertiary flex flex-col justify-start  items-center"
-      id="contact"
-    >
-      <div className=" flex flex-col pt-10 ">
-        <h1 className="xl:text-8xl lg:text-5xl md:text-5xl sm:text-5xl text-5xl font-semibold ">
-          Contact Info
-        </h1>
+    <footer className="site-footer" id="contact">
+      <div data-reveal>
+        <p className="footer-eyebrow">GET IN TOUCH</p>
+        <h2>Have something in mind?</h2>
+        <a className="footer-email" href="mailto:bryansurjadi@gmail.com">bryansurjadi@gmail.com ↗</a>
       </div>
-
-      <div className="mt-14 xl:text-3xl lg:text-2xl md:text-2xl sm:text-2xl text-xl  flex flex-col items-start space-y-4  h-full">
-        <p className="underline ">bryansurjadi@gmail.com</p>
-        <p>+62 822 9704 9686</p>
+      <div className="footer-bottom">
+        <span>© {new Date().getFullYear()} Bryan Surjadi</span>
+        <div className="footer-links">
+          <a href="https://github.com/BryanSurjadi" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.instagram.com/bryansurjadi/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/in/bryan-surjadi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 }

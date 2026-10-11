@@ -27,7 +27,7 @@ export default function Carousel({ children: slides }) {
       <div className=" absolute inset-0 flex items-center justify-between   ">
         <button
           onClick={prev}
-          className="p-1 bg-gray-400 rounded-full opacity-70  hover:bg-gray-700"
+          className="p-1 bg-box rounded-full opacity-90 hover:bg-tertiary hover:text-white"
         >
           <Icon
             icon="mdi:chevron-left"
@@ -36,7 +36,7 @@ export default function Carousel({ children: slides }) {
         </button>
         <button
           onClick={next}
-          className="p-1 bg-gray-400 rounded-full opacity-70  hover:bg-gray-700"
+          className="p-1 bg-box rounded-full opacity-90 hover:bg-tertiary hover:text-white"
         >
           <Icon
             icon="mdi:chevron-right"
