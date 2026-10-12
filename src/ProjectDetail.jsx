@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 import { projects } from "./projects";
+import Carousel from "./Carousel";
 
 export default function ProjectDetail() {
   const { slug } = useParams();
@@ -22,12 +23,28 @@ export default function ProjectDetail() {
         <h1>{project.name}</h1>
         <p>{project.summary}</p>
         <ul className="project-tech">{project.tech.map((tech) => <li key={tech}>{tech}</li>)}</ul>
-        {(project.github || project.demo) && <div className="detail-links">
+        {(project.github || project.demo || project.paper) && <div className="detail-links">
           {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer">View code on GitHub ↗</a>}
+          {project.paper && <a href={project.paper} target="_blank" rel="noopener noreferrer">ICIMTech 2026 conference book ↗</a>}
           {project.demo && <a href={project.demo} target="_blank" rel="noopener noreferrer">Live demo ↗</a>}
         </div>}
       </div>
-      {project.cover ? <img className="detail-cover" src={project.cover} alt={`${project.name} project preview`} /> :
+      {project.contributions ?
+        <section className="contribution-map" aria-label="Polytron work areas">
+          <div className="contribution-map-heading">
+            <span className="section-eyebrow">SELECTED CONTRIBUTIONS</span>
+            <strong>Polytron Indonesia</strong>
+            <p>Internal web systems · broad overview</p>
+          </div>
+          <div className="contribution-map-grid">
+            {project.contributions.map(({ area, work }, index) =>
+              <div className="contribution-map-item" key={area}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h2>{area}</h2>
+                <p>{work}</p>
+              </div>)}
+          </div>
+        </section> : project.images ? <Carousel images={project.images} key={project.slug} /> : project.cover ? <img className="detail-cover" src={project.cover} alt={`${project.name} project preview`} /> :
         <div className={`detail-art project-art project-art--${project.slug}`} aria-label={`${project.name} visual placeholder`} role="img">
           <span className="project-art-index">PROJECT VISUAL / COMING SOON</span>
           <strong>{project.mark}</strong>
@@ -44,7 +61,17 @@ export default function ProjectDetail() {
           <ul>{project.focus.map((item) => <li key={item}>{item}</li>)}</ul>
         </div>
       </div>
-      <div className="detail-gallery" aria-label="Project screenshots">
+      {project.workflow && <section className="detail-insights">
+        <p className="section-eyebrow">THE WORKFLOW</p>
+        <h2>{project.workflowTitle}</h2>
+        <ol>{project.workflow.map((step) => <li key={step}>{step}</li>)}</ol>
+      </section>}
+      {project.insights && <section className="detail-insights">
+        <p className="section-eyebrow">RESEARCH INSIGHTS</p>
+        <h2>What we found</h2>
+        <ol>{project.insights.map((insight) => <li key={insight}>{insight}</li>)}</ol>
+      </section>}
+      {!project.contributions && !project.images && <div className="detail-gallery" aria-label="Project screenshots">
         {gallery.map((image, index) => image ?
           <figure className="detail-shot" key={image.src}>
             <a href={image.src} target="_blank" rel="noopener noreferrer" aria-label={`Open full-size image: ${image.alt}`}>
@@ -55,7 +82,7 @@ export default function ProjectDetail() {
           <div className="detail-shot-placeholder" key={index}>
             {String(index + 1).padStart(2, "0")} <span>Project image coming soon</span>
           </div>) }
-      </div>
+      </div>}
       <Link className="detail-end-link" to="/#project" smooth>← All projects</Link>
     </main>
   );

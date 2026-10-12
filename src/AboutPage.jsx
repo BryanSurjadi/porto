@@ -11,22 +11,22 @@ export default function AboutPage() {
           About Me
         </h2>
         <p className="section-paragraph">
-          I&apos;m a software developer most at home with backend and full-stack
-          work. At <strong>Polytron Indonesia</strong>, I&apos;ve worked with the APIs,
-          databases, and workflows that keep web products running. Outside of
-          work, I build tools that use AI and automation to take repetitive
-          steps out of creative and administrative tasks.
+          I&apos;m a software developer drawn to backend and full-stack work.
+          During a year-long internship at <strong>Polytron Indonesia</strong>, I helped
+          build and improve internal systems, from APIs and data-heavy workflows
+          to the interfaces people use every day. Lately, I&apos;ve been building
+          AI-assisted tools that make creative and administrative work less repetitive.
         </p>
 
         <p className="section-paragraph">
-          I also handle social media for a brand: planning content, producing
-          visuals and copy, and running Meta Ads campaigns. It gives me another
-          view of how people find a product, respond to it, and use it.
+          Outside of coding, I help a local brand with its online presence. I
+          plan and create social content, and run Meta Ads campaigns. That work
+          has made me think more about how people discover and connect with a product.
         </p>
 
         <p className="section-paragraph">
-          I co-authored a paper accepted at ICIMTECH that compares GraphQL and
-          REST APIs across performance, resource use, and ease of implementation.
+          I also co-authored a paper accepted at ICIMTECH 2026 comparing GraphQL
+          and REST APIs across performance, resource use, and implementation effort.
         </p>
         <a
           href={resume}

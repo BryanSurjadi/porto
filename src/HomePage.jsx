@@ -43,7 +43,7 @@ export default function HomePage() {
             sequence={[
               "Software Developer",
               1000,
-              "Social Media & Ads Manager",
+              "& a slice of social media",
               1000,
             ]}
             wrapper="span"

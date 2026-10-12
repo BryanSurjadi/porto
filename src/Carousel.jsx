@@ -1,49 +1,36 @@
-import { Icon } from "@iconify/react";
 import { useState } from "react";
 
-export default function Carousel({ children: slides }) {
-  const [curr, setCurr] = useState(0);
-
-  const prev = () => {
-    setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
-  };
-
-  const next = () => {
-    setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+export default function Carousel({ images }) {
+  const [current, setCurrent] = useState(0);
+  const [ratios, setRatios] = useState({});
+  const [wrap, setWrap] = useState(false);
+  const ratio = ratios[images[current].src] ?? 16 / 9;
+  const move = (step) => {
+    setWrap((step < 0 && current === 0) || (step > 0 && current === images.length - 1));
+    setCurrent((current + step + images.length) % images.length);
   };
 
   return (
-    <div className="w-auto flex overflow-hidden relative">
-      <div
-        className="flex min-w-full transition-transform duration-500"
-        style={{ transform: `translateX(-${curr * 100}%)`, width: "100%" }}
-      >
-        {slides.map((slide, index) => (
-          <div key={index} className="w-full flex-shrink-0">
-            {slide}
-          </div>
-        ))}
+    <section className="detail-carousel" aria-label="Project image gallery">
+      <div className="detail-carousel-viewport" style={{ width: `min(100%, ${ratio * 68}vh, ${ratio * 720}px)`, aspectRatio: ratio }}>
+        <div className="detail-carousel-track" style={{ transform: `translateX(-${current * 100}%)`, transition: wrap ? "none" : undefined }}>
+          {images.map((image, index) => (
+            <a className="detail-carousel-slide" href={image.src} target="_blank" rel="noopener noreferrer" key={image.src} tabIndex={current === index ? 0 : -1} aria-hidden={current !== index}>
+              <img src={image.src} alt={image.alt} loading={index === current ? "eager" : "lazy"} onLoad={(event) => {
+                const measuredRatio = event.currentTarget.naturalWidth / event.currentTarget.naturalHeight;
+                setRatios((saved) => saved[image.src] === measuredRatio ? saved : { ...saved, [image.src]: measuredRatio });
+              }} />
+            </a>
+          ))}
+        </div>
       </div>
-      <div className=" absolute inset-0 flex items-center justify-between   ">
-        <button
-          onClick={prev}
-          className="p-1 bg-box rounded-full opacity-90 hover:bg-tertiary hover:text-white"
-        >
-          <Icon
-            icon="mdi:chevron-left"
-            className="size-10 lg:size-16 md:size-12 sm:size-10 cursor-pointer "
-          />
-        </button>
-        <button
-          onClick={next}
-          className="p-1 bg-box rounded-full opacity-90 hover:bg-tertiary hover:text-white"
-        >
-          <Icon
-            icon="mdi:chevron-right"
-            className="size-10 lg:size-16 md:size-12 sm:size-10 cursor-pointer"
-          />
-        </button>
+      <div className="detail-carousel-controls">
+        <p aria-live="polite"><span>{String(current + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}</span>{images[current].alt}</p>
+        <div>
+          <button type="button" onClick={() => move(-1)} aria-label="Previous image">←</button>
+          <button type="button" onClick={() => move(1)} aria-label="Next image">→</button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
