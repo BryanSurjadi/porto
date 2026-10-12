@@ -79,7 +79,7 @@ export default function HomePage() {
       <div>
         <img
           className="hero-portrait hero-image-motion"
-          src="/assets/pp-full.jpg"
+          src="/assets/pp-hero.webp"
           alt="Bryan Surjadi smiling at the camera"
         />
       </div>

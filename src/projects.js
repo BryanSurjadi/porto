@@ -32,9 +32,9 @@ export const projects = [
     tech: ["REST APIs", "GraphQL", "k6", "Docker"],
     github: "https://github.com/michaelnathaan/aps-be",
     paper: "https://sis.binus.ac.id/icimtech/post/conference-book-12/",
-    cover: "/assets/research/poster.jpg",
+    cover: "/assets/thumbs/research.webp",
     images: [
-      { src: "/assets/research/poster.jpg", alt: "GraphQL versus REST research poster" },
+      { src: "/assets/research/poster-display.webp", full: "/assets/research/poster.jpg", alt: "GraphQL versus REST research poster" },
       { src: "/assets/research/page1.png", alt: "First page of the GraphQL versus REST research paper" },
       { src: "/assets/research/k6test.png", alt: "k6 load testing output" },
       { src: "/assets/research/oneoftestresult.png", alt: "REST and GraphQL test result comparison" },
@@ -50,7 +50,7 @@ export const projects = [
     focus: ["Word-level caption generation", "Timing and text editing", "Caption styling", "MP4 export"],
     tech: ["TypeScript", "Next.js", "Express.js", "faster-whisper", "FFmpeg"],
     github: "https://github.com/BryanSurjadi/captionflow",
-    cover: "/assets/captionflow/home.png",
+    cover: "/assets/thumbs/captionflow.webp",
     images: [
       { src: "/assets/captionflow/home.png", alt: "CaptionFlow upload and landing page" },
       { src: "/assets/captionflow/preview.png", alt: "Uploaded video preview and caption generation" },
@@ -77,7 +77,7 @@ export const projects = [
     workflowTitle: "From idea to reel",
     tech: ["TypeScript", "Next.js", "Express.js", "PostgreSQL", "Prisma", "OpenAI API", "ElevenLabs API"],
     github: "https://github.com/BryanSurjadi/voxreels",
-    cover: "/assets/voxreels/home.png",
+    cover: "/assets/thumbs/voxreels.webp",
     images: [
       { src: "/assets/voxreels/home.png", alt: "VoxReels landing page for starting a short-form video" },
       { src: "/assets/voxreels/home chat.png", alt: "Workspace with projects, brand selection, and remaining generation credits" },
@@ -107,7 +107,7 @@ export const projects = [
     ],
     tech: ["TypeScript", "Next.js", "React", "Express.js", "PostgreSQL", "Prisma", "OpenAI API"],
     github: "https://github.com/BryanSurjadi/cvision",
-    cover: "/assets/cvision/home candidate.png",
+    cover: "/assets/thumbs/cvision.webp",
     images: [
       { src: "/assets/cvision/home candidate.png", alt: "CVision candidate dashboard and submission entry point" },
       { src: "/assets/cvision/new submission.png", alt: "PDF CV upload form with a target role" },
@@ -129,7 +129,7 @@ export const projects = [
     focus: ["Accommodation browsing", "Property details", "Host listings"],
     tech: ["JavaScript", "React", "CSS"],
     github: "https://github.com/BryanSurjadi/bnb-clone",
-    cover: "/assets/b/1.png",
+    cover: "/assets/thumbs/airbry.webp",
     images: [
       { src: "/assets/b/1.png", alt: "AirBrY accommodation browsing page" },
       { src: "/assets/b/2.png", alt: "AirBrY property detail page" },
@@ -145,7 +145,7 @@ export const projects = [
     overview: "I work on the salon's web presence and manage its social media. The project brings together an SEO-focused Astro site, content, and Meta Ads campaigns.",
     focus: ["Astro landing page", "SEO", "Social media and Meta Ads"],
     tech: ["Astro", "SEO", "Meta Ads", "Content creation"],
-    cover: "/assets/smj/hero.png",
+    cover: "/assets/thumbs/smj.webp",
     images: [
       { src: "/assets/smj/hero.png", alt: "Salon Murah Jakarta landing page and consultation call to action" },
       { src: "/assets/smj/services.png", alt: "Feather Hair Extension service and consultation flow" },
