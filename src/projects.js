@@ -145,6 +145,7 @@ export const projects = [
     overview: "I work on the salon's web presence and manage its social media. The project brings together an SEO-focused Astro site, content, and Meta Ads campaigns.",
     focus: ["Astro landing page", "SEO", "Social media and Meta Ads"],
     tech: ["Astro", "SEO", "Meta Ads", "Content creation"],
+    demo: "https://salonmurahjakarta.com/",
     cover: "/assets/thumbs/smj.webp",
     images: [
       { src: "/assets/smj/hero.png", alt: "Salon Murah Jakarta landing page and consultation call to action" },
