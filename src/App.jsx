@@ -9,9 +9,11 @@ import SkillPage from "./SkillPage";
 import ProjectPage from "./ProjectsPage";
 import ProjectDetail from "./ProjectDetail";
 import Contacts from "./Contacts";
+import useSmoothScroll from "./useSmoothScroll";
 
 function AppContent() {
   const { pathname } = useLocation();
+  const scrollToSection = useSmoothScroll(pathname);
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -90,7 +92,7 @@ function AppContent() {
     <>
       <nav className={`glass-nav${isScrolled ? " is-scrolled" : ""}`} aria-label="Primary navigation">
         <div className="glass-nav-inner">
-          <Link className="nav-brand" to="/#home" smooth>Bryan<span>.</span></Link>
+          <Link className="nav-brand" to="/#home" scroll={scrollToSection}>Bryan<span>.</span></Link>
           <button type="button" className="nav-toggle md:hidden" onClick={toggleMenu} aria-label={isOpen ? "Close menu" : "Open menu"} aria-expanded={isOpen} aria-controls="mobile-nav">
             {isOpen ? (
               <Icon icon="mdi:close" className="text-3xl" />
@@ -101,22 +103,22 @@ function AppContent() {
 
           <ul className="nav-links hidden md:flex">
             <li>
-              <Link to="/#home" smooth>
+              <Link to="/#home" scroll={scrollToSection}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/#about" smooth>
+              <Link to="/#about" scroll={scrollToSection}>
                 About
               </Link>
             </li>
             <li>
-              <Link to="/#skills" smooth>
+              <Link to="/#skills" scroll={scrollToSection}>
                 Skills
               </Link>
             </li>
             <li>
-              <Link to="/#project" smooth>
+              <Link to="/#project" scroll={scrollToSection}>
                 Portfolio
               </Link>
             </li>
@@ -128,22 +130,22 @@ function AppContent() {
           className={`${isOpen ? "flex" : "hidden"} nav-mobile flex-col md:hidden`}
         >
           <li onClick={toggleMenu}>
-            <Link to="/#home" smooth>
+            <Link to="/#home" scroll={scrollToSection}>
               Home
             </Link>
           </li>
           <li onClick={toggleMenu}>
-            <Link to="/#about" smooth>
+            <Link to="/#about" scroll={scrollToSection}>
               About
             </Link>
           </li>
           <li onClick={toggleMenu}>
-            <Link to="/#skills" smooth>
+            <Link to="/#skills" scroll={scrollToSection}>
               Skills
             </Link>
           </li>
           <li onClick={toggleMenu}>
-            <Link to="/#project" smooth>
+            <Link to="/#project" scroll={scrollToSection}>
               Portfolio
             </Link>
           </li>
@@ -152,7 +154,7 @@ function AppContent() {
 
       <Routes>
         <Route path="/" element={<><HomePage /><AboutPage /><SkillPage /><ProjectPage /><Contacts /></>} />
-        <Route path="/projects/:slug" element={<ProjectDetail />} />
+        <Route path="/projects/:slug" element={<ProjectDetail scrollToSection={scrollToSection} />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <div className="page-grid-follower" aria-hidden="true" />

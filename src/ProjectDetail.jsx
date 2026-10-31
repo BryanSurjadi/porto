@@ -1,23 +1,20 @@
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 import { projects } from "./projects";
 import Carousel from "./Carousel";
 
-export default function ProjectDetail() {
+export default function ProjectDetail({ scrollToSection }) {
   const { slug } = useParams();
   const project = projects.find((item) => item.slug === slug);
   const gallery = project?.images ?? Array(3).fill(null);
 
-  useEffect(() => { window.scrollTo(0, 0); }, [slug]);
-
   if (!project) {
-    return <main className="detail-page"><Link className="detail-back" to="/#project">← Back to projects</Link><h1>Project not found</h1></main>;
+    return <main className="detail-page"><Link className="detail-back" to="/#project" scroll={scrollToSection}>← Back to projects</Link><h1>Project not found</h1></main>;
   }
 
   return (
     <main className="detail-page">
-      <Link className="detail-back" to="/#project" smooth>← Back to projects</Link>
+      <Link className="detail-back" to="/#project" scroll={scrollToSection}>← Back to projects</Link>
       <div className="detail-heading">
         <p className="section-eyebrow">{project.category}</p>
         <h1>{project.name}</h1>
@@ -83,7 +80,7 @@ export default function ProjectDetail() {
             {String(index + 1).padStart(2, "0")} <span>Project image coming soon</span>
           </div>) }
       </div>}
-      <Link className="detail-end-link" to="/#project" smooth>← All projects</Link>
+      <Link className="detail-end-link" to="/#project" scroll={scrollToSection}>← All projects</Link>
     </main>
   );
 }
