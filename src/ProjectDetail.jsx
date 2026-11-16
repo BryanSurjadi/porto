@@ -68,7 +68,7 @@ export default function ProjectDetail({ scrollToSection }) {
         <h2>What we found</h2>
         <ol>{project.insights.map((insight) => <li key={insight}>{insight}</li>)}</ol>
       </section>}
-      {!project.contributions && !project.images && <div className="detail-gallery" aria-label="Project screenshots">
+      {!project.contributions && !project.images && !project.cover && <div className="detail-gallery" aria-label="Project screenshots">
         {gallery.map((image, index) => image ?
           <figure className="detail-shot" key={image.src}>
             <a href={image.src} target="_blank" rel="noopener noreferrer" aria-label={`Open full-size image: ${image.alt}`}>
