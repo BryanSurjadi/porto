@@ -4,7 +4,7 @@ export default function Contacts() {
       <div data-reveal>
         <p className="footer-eyebrow">GET IN TOUCH</p>
         <h2>Have something in mind?</h2>
-        <a className="footer-email" href="mailto:bryansurjadi@gmail.com">bryansurjadi@gmail.com ↗</a>
+        <a className="footer-email" href="mailto:bryanarmando999@gmail.com">bryanarmando999@gmail.com ↗</a>
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Bryan Surjadi</span>
