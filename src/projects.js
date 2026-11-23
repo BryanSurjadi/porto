@@ -27,6 +27,7 @@ export const projects = [
     tech: ["TypeScript", "Next.js", "Prisma", "Anthropic API", "fal.ai", "yt-dlp", "FFmpeg", "Remotion"],
     demo: "https://trylumo.ink/",
     cover: "/assets/thumbs/lumo.webp",
+    video: true,
     images: [
       { src: "/assets/lumo/home-chat.webp", alt: "Shared studio workspace with a chat prompt and example videos" },
       { src: "/assets/lumo/template-videos.webp", alt: "UGC Studio template gallery for short product videos" },
@@ -52,6 +53,7 @@ export const projects = [
     github: "https://github.com/michaelnathaan/aps-be",
     paper: "https://sis.binus.ac.id/icimtech/post/conference-book-12/",
     cover: "/assets/thumbs/research.webp",
+    video: true,
     images: [
       { src: "/assets/research/poster-display.webp", full: "/assets/research/poster.jpg", alt: "GraphQL versus REST research poster" },
       { src: "/assets/research/page1.png", alt: "First page of the GraphQL versus REST research paper" },
@@ -70,6 +72,7 @@ export const projects = [
     tech: ["TypeScript", "Next.js", "Express.js", "faster-whisper", "FFmpeg"],
     github: "https://github.com/BryanSurjadi/captionflow",
     cover: "/assets/thumbs/captionflow.webp",
+    video: true,
     images: [
       { src: "/assets/captionflow/home.png", alt: "CaptionFlow upload and landing page" },
       { src: "/assets/captionflow/preview.png", alt: "Uploaded video preview and caption generation" },
@@ -97,6 +100,7 @@ export const projects = [
     tech: ["TypeScript", "Next.js", "Express.js", "PostgreSQL", "Prisma", "OpenAI API", "ElevenLabs API"],
     github: "https://github.com/BryanSurjadi/voxreels",
     cover: "/assets/thumbs/voxreels.webp",
+    video: true,
     images: [
       { src: "/assets/voxreels/home.png", alt: "VoxReels landing page for starting a short-form video" },
       { src: "/assets/voxreels/home chat.png", alt: "Workspace with projects, brand selection, and remaining generation credits" },
@@ -127,6 +131,7 @@ export const projects = [
     tech: ["TypeScript", "Next.js", "React", "Express.js", "PostgreSQL", "Prisma", "OpenAI API"],
     github: "https://github.com/BryanSurjadi/cvision",
     cover: "/assets/thumbs/cvision.webp",
+    video: true,
     images: [
       { src: "/assets/cvision/home candidate.png", alt: "CVision candidate dashboard and submission entry point" },
       { src: "/assets/cvision/new submission.png", alt: "PDF CV upload form with a target role" },
@@ -149,6 +154,7 @@ export const projects = [
     tech: ["Astro", "SEO", "Meta Ads", "Content creation"],
     demo: "https://salonmurahjakarta.com/",
     cover: "/assets/thumbs/smj.webp",
+    video: true,
     images: [
       { src: "/assets/smj/hero.png", alt: "Salon Murah Jakarta landing page and consultation call to action" },
       { src: "/assets/smj/services.png", alt: "Feather Hair Extension service and consultation flow" },
