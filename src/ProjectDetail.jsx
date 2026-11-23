@@ -12,6 +12,12 @@ export default function ProjectDetail({ scrollToSection }) {
     return <main className="detail-page"><Link className="detail-back" to="/#project" scroll={scrollToSection}>← Back to projects</Link><h1>Project not found</h1></main>;
   }
 
+  const video = project.video ? {
+    src: `/assets/demos/${project.slug}.mp4`,
+    poster: `/assets/demos/${project.slug}.webp`,
+    alt: `${project.name} workflow demo`,
+  } : undefined;
+
   return (
     <main className="detail-page">
       <Link className="detail-back" to="/#project" scroll={scrollToSection}>← Back to projects</Link>
@@ -26,16 +32,6 @@ export default function ProjectDetail({ scrollToSection }) {
           {project.demo && <a href={project.demo} target="_blank" rel="noopener noreferrer">Live demo ↗</a>}
         </div>}
       </div>
-      {project.video && <video
-        className="detail-cover detail-video"
-        src={`/assets/demos/${project.slug}.mp4`}
-        poster={`/assets/demos/${project.slug}.webp`}
-        aria-label={`${project.name} workflow demo`}
-        controls
-        playsInline
-        preload="none"
-        key={project.slug}
-      />}
       {project.contributions ?
         <section className="contribution-map" aria-label="Polytron work areas">
           <div className="contribution-map-heading">
@@ -51,12 +47,12 @@ export default function ProjectDetail({ scrollToSection }) {
                 <p>{work}</p>
               </div>)}
           </div>
-        </section> : !project.video && !project.images && (project.cover ? <img className="detail-cover" src={project.cover} alt={`${project.name} project preview`} /> :
+        </section> : video || project.images?.length ? <Carousel images={project.images} video={video} key={project.slug} /> : project.cover ? <img className="detail-cover" src={project.cover} alt={`${project.name} project preview`} /> :
         <div className={`detail-art project-art project-art--${project.slug}`} aria-label={`${project.name} visual placeholder`} role="img">
           <span className="project-art-index">PROJECT VISUAL / COMING SOON</span>
           <strong>{project.mark}</strong>
           <span className="project-art-line" />
-        </div>)}
+        </div>}
       <div className="detail-body">
         <div>
           <p className="section-eyebrow">THE WORK</p>
@@ -78,7 +74,6 @@ export default function ProjectDetail({ scrollToSection }) {
         <h2>What we found</h2>
         <ol>{project.insights.map((insight) => <li key={insight}>{insight}</li>)}</ol>
       </section>}
-      {project.images && !project.contributions && <Carousel images={project.images} key={project.slug} />}
       {!project.video && !project.contributions && !project.images && !project.cover && <div className="detail-gallery" aria-label="Project screenshots">
         {gallery.map((image, index) => image ?
           <figure className="detail-shot" key={image.src}>
